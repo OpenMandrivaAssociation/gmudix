@@ -29,12 +29,15 @@ tab completion, timers and triggers.
 rm -rf $RPM_BUILD_ROOT
 %{makeinstall_std}
 
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):command="%{_gamesbindir}/%{name}" \
-icon="other_amusement.png" needs="X11" section="More applications/Games/Other" \
-title="gMudix" \
-longtitle="%{Summary}"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{_gamesbindir}/%{name}
+Icon=other_amusement
+Categories=Game;
+Name=gMudix
+Comment=%{Summary}
 EOF
 
 %post
@@ -50,5 +53,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc TODO README AUTHORS ChangeLog
 %{_gamesbindir}/%{name}
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
 
