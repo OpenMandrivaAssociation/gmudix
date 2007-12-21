@@ -10,6 +10,7 @@ Release:	%mkrel %{release}
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://dw.nl.eu.org/mudix.html
 Group:		Games/Other
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	LGPL
 BuildRequires:	gtk+2-devel
 
