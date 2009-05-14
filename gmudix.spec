@@ -13,7 +13,7 @@ Patch1:     %{name}-fix-linking-problem.diff
 URL:		http://dw.nl.eu.org/mudix.html
 Group:		Games/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-License:	LGPL
+License:	GPLv2+
 BuildRequires:	gtk+2-devel
 
 %description
