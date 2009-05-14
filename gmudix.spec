@@ -43,7 +43,7 @@ cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
 Type=Application
 Exec=%{_gamesbindir}/%{name}
 Icon=other_amusement
-Categories=Game;
+Categories=Game;RolePlaying;
 Name=gMudix
 Comment=%{Summary}
 EOF
