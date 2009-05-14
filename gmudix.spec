@@ -1,6 +1,6 @@
 %define	name	gmudix
 %define	version	1.0
-%define	release	3
+%define	release 4	
 %define	Summary	GMudix GTK mud client
 
 Name:		%{name} 
@@ -8,6 +8,7 @@ Summary:	%{Summary}
 Version:	%{version} 
 Release:	%mkrel %{release} 
 Source0:	%{name}-%{version}.tar.bz2
+Patch0: 	%{name}-fix-str-fmt.diff
 URL:		http://dw.nl.eu.org/mudix.html
 Group:		Games/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -21,6 +22,7 @@ tab completion, timers and triggers.
 
 %prep
 %setup -q
+%patch0 -p1 -b .str-fmt
 
 %build
 %configure	--bindir=%{_gamesbindir}
