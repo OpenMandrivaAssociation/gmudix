@@ -9,6 +9,7 @@ Version:	%{version}
 Release:	%mkrel %{release} 
 Source0:	%{name}-%{version}.tar.bz2
 Patch0: 	%{name}-fix-str-fmt.diff
+Patch1:     %{name}-fix-linking-problem.diff
 URL:		http://dw.nl.eu.org/mudix.html
 Group:		Games/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -23,8 +24,12 @@ tab completion, timers and triggers.
 %prep
 %setup -q
 %patch0 -p1 -b .str-fmt
+%patch1 -p0
 
 %build
+aclocal
+autoconf
+automake -a
 %configure	--bindir=%{_gamesbindir}
 %make
 
