@@ -67,3 +67,39 @@ rm -rf $RPM_BUILD_ROOT
 %{_gamesbindir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop
 
+
+
+%changelog
+* Thu May 14 2009 Samuel Verschelde <stormi@mandriva.org> 1.0-4mdv2010.0
++ Revision: 375658
+- fix Licence
+- fix menu category
+- fix str fmt
+
+  + Michael Scherer <misc@mandriva.org>
+    - fix underlinking issues
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Mon Dec 17 2007 Thierry Vignaud <tv@mandriva.org> 1.0-3mdv2008.1
++ Revision: 131647
+- auto-convert XDG menu entry
+- kill re-definition of %%buildroot on Pixel's request
+- import gmudix
+
+
+* Fri Oct 07 2005 Per Øyvind Karlsen <pkarlsen@mandriva.com> 1.0-3mdk
+- rebuild for new cairo
+
+* Mon Aug 08 2005 Per Øyvind Karlsen <pkarlsen@mandriva.com> 1.0-2mdk
+- rebuild
+- %%mkrel
+
+* Wed Jun 23 2004 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 1.0-1mdk
+- spec fixes
+- from Eskild Hustvedt <eskild@mandrakehelp.com>:
+	o Initial Mandrakelinux package
