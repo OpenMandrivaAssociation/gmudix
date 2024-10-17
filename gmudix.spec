@@ -10,7 +10,7 @@ Release:	%mkrel %{release}
 Source0:	%{name}-%{version}.tar.bz2
 Patch0: 	%{name}-fix-str-fmt.diff
 Patch1:     %{name}-fix-linking-problem.diff
-URL:		http://dw.nl.eu.org/mudix.html
+URL:		https://dw.nl.eu.org/mudix.html
 Group:		Games/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	GPLv2+
